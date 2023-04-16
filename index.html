@@ -1,123 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Multi-Column Layout</title>
-    <style>
-      /* Define styles for header and nav menu buttons */
-      header {
-        background-color: #12264f;
-        color: #ffffff;
-        padding: 20px;
-      }
-      
-      nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav ul li:first-child a {
-  color: blue;
-}
-
-nav ul li:not(:first-child) a {
-  color: #ffffff;
-}
-      /* Define styles for image columns */
-.container {
-  display: flex;
-}
-
-.image-column {
-  flex-grow: 1; /* Add this property */
-  width: calc(25% - 20px);
-  margin-right: 20px;
-}
-
-.image-column:last-child {
-  margin-right: 0;
-}
-
-.image-column.large-square {
-  width: calc(50% - 20px);
-  align-self: flex-start;
-  padding: 20px;
-}
-
-.image-column.large-square iframe {
-  width: 100%;
-  height: 300px;
-}
-
-.image-column img {
-  width: 100%;
-}
-
-.image-column h3 {
-  margin-top: 20px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.image-column p {
-  font-size: 14px;
-  text-align: center;
-}
-
-.image-column.medium-square {
-  width: calc(25% - 20px);
-  height: 200px;
-  margin-top: 20px;
-}
-
-.image-column.long-rectangle {
-  width: calc(25% - 20px);
-  height: 400px;
-  margin-top: 20px;
-}
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Nav Button 1</a></li>
-          <li><a href="#">Nav Button 2</a></li>
-          <li><a href="#">Nav Button 3</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="image-column large-square">
-        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="multi-column">
-        <div class="column">
-          <div class="image-column">
-            <a href="#"><img src="image1.jpg" alt="Image 1"></a>
-            <h3>Image 1 Header</h3>
-            <p>Image 1 Description</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="image-column">
-            <a href="#"><img src="image2.jpg" alt="Image 2"></a>
-            <h3>Image 2 Header</h3>
-            <p>Image 2 Description</p>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
+<head>
+	<title>Two Column Layout</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			max-width: 1200px;
+		}
+		.column {
+			flex: 1;
+			padding: 20px;
+		}
+		.column-1 {
+			background-color: #eee;
+		}
+		.column-2 {
+			background-color: #f7f7f7;
+		}
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1>Two Column Layout</h1>
+	</header>
+	<div class="container">
+		<div class="column column-1">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non leo nisl. Pellentesque sodales sapien ac diam gravida, vel sagittis lectus suscipit. Suspendisse fringilla, eros id aliquet vehicula, eros justo tempus velit, et pharetra nisi metus vel ipsum. Nullam a bibendum sapien, nec blandit purus.</p>
+		</div>
+		<div class="column column-2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non leo nisl. Pellentesque sodales sapien ac diam gravida, vel sagittis lectus suscipit. Suspendisse fringilla, eros id aliquet vehicula, eros justo tempus velit, et pharetra nisi metus vel ipsum. Nullam a bibendum sapien, nec blandit purus.</p>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>&copy; 2023 My Website</p>
+	</footer>
+</body>
 </html>
