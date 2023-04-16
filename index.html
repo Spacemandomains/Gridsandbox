@@ -26,9 +26,10 @@
         text-decoration: none;
         font-size: 18px;
       }
-     nav a:first-child {
-  color: #197ba5; /* replace with your desired color */
-}
+      
+      nav a:first-child {
+        color: #197ba5; /* replace with your desired color */
+      }
  
       /* Define styles for image columns */
       .image-column {
@@ -53,15 +54,18 @@
       }
       
       .image-column.large-square {
-  display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  padding: 20px;
-}
-.image-column.large-square iframe {
-  width: 25%;
-  height: 300px;
-} 
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 20px;
+      }
+      
+      .image-column.large-square iframe {
+        width: 100%;
+        height: 300px;
+        float: left;
+      } 
+      
       .medium-square {
         width: 100%;
         height: 200px;
@@ -73,16 +77,12 @@
         height: 400px;
         margin-top: 20px;
       }
-     iframe {
-  float: left;
-  width: 60%; /* adjust as needed */
-}
-.column1,
-.column2 {
-  float: right;
-  width: 20%; /* adjust as needed */
-}
-
+      
+      .column1,
+      .column2 {
+        float: right;
+        width: 20%; /* adjust as needed */
+      }
     </style>
   </head>
   <body>
@@ -96,18 +96,20 @@
       </nav>
     </header>
     <main>
-      <div class="image-column large-square">
-        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="image-column long-rectangle">
-        <a href="#"><img src="image1.jpg" alt="Image 1"></a>
-        <h3>Image 1 Header</h3>
-        <p>Image 1 Description</p>
-      </div>
-      <div class="image-column long-rectangle">
-        <a href="#"><img src="image2.jpg" alt="Image 2"></a>
-        <h3>Image 2 Header</h3>
-        <p>Image 2 Description</p>
+      <div class="image-row">
+        <div class="image-column large-square">
+          <iframe width="100%" height="300px" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="image-column long-rectangle">
+          <a href="#"><img src="image1.jpg" alt="Image 1"></a>
+          <h3>Image 1 Header</h3>
+          <p>Image 1 Description</p>
+        </div>
+        <div class="image-column long-rectangle">
+          <a href="#"><img src="image2.jpg" alt="Image 2"></a>
+          <h3>Image 2 Header</h3>
+          <p>Image 2 Description</p>
+        </div>
       </div>
       <div class="image-column medium-square">
         <a href="#"><img src="medium-image.jpg" alt="Medium Image"></a>
@@ -115,7 +117,6 @@
       <div class="image-column long-rectangle">
         <a href="#"><img src="image3.jpg" alt="Image 3"></a>
         <h3>Image 3 Header</h3>
-        <p>Image 3 Description</p>
       </div>
       <div class="image-column long-rectangle">
         <a href="#"><img src="image4.jpg" alt="Image 4"></a>
