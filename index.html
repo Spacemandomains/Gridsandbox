@@ -11,25 +11,30 @@
       }
       
       nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      
-      nav li {
-        margin-right: 20px;
-      }
-      
-      nav a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      
-      nav ul li:first-child a {
-      color: blue; /* replace with your desired color */
-      }
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li:first-child a {
+  color: blue;
+}
+
+nav ul li:not(:first-child) a {
+  color: #ffffff;
+}
+
  
       /* Define styles for image columns */
       .container {
