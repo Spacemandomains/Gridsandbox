@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Multi-Column Layout with Large Square for iFrame</title>
+    <title>Multi-Column Layout</title>
     <style>
       /* Define styles for header and nav menu buttons */
       header {
@@ -22,19 +22,39 @@
       }
       
       nav a {
-        color: #fff;
+        color: #ffffff;
         text-decoration: none;
         font-size: 18px;
       }
-     nav a:first-child {
-  color: #197ba5; /* replace with your desired color */
-}
+      
+      nav a:first-child {
+        color: red ; /* replace with your desired color */
+      }
  
       /* Define styles for image columns */
-      .image-column {
+      .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .image-column {
+        width: calc(25% - 20px);
+        margin-right: 20px;
+      }
+
+      .image-column:last-child {
+        margin-right: 0;
+      }
+
+      .image-column.large-square {
+        width: calc(50% - 20px);
+        align-self: flex-start;
+        padding: 20px;
+      }
+
+      .image-column.large-square iframe {
+        width: 100%;
+        height: 300px;
       }
       
       .image-column img {
@@ -52,36 +72,16 @@
         text-align: center;
       }
       
-      .image-column.large-square {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        padding: 20px;
+      .image-column.medium-square {
+        width: calc(25% - 20px);
+        height: 200px;
+        margin-top: 20px;
       }
       
-      .image-column.large-square iframe {
-        width: 100%;
-        height: 300px;
-      } 
-
-      /* Define styles for multi-column layout */
-      .multi-column {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 20px;
-      }
-      
-      .multi-column .column {
-        flex: 1;
-        margin-right: 20px;
-      }
-      
-      .multi-column .column:last-child {
-        margin-right: 0;
-      }
-      
-      .multi-column .image-column {
-        margin-bottom: 20px;
+      .image-column.long-rectangle {
+        width: calc(25% - 20px);
+        height: 400px;
+        margin-top: 20px;
       }
     </style>
   </head>
