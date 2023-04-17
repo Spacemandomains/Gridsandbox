@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Two Column Layout</title>
-	<style type="text/css">
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-		}
-		.header {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			text-align: center;
-		}
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0 auto;
-			max-width: 1200px;
-		}
-		.column {
-			flex: 1;
-			padding: 20px;
-		}
-		.column-1 {
-			background-color: #eee;
-		}
-		.column-2 {
-			background-color: #f7f7f7;
-		}
-		.footer {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			text-align: center;
-		}
-	</style>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+      grid-gap: 8px;
+      background-color: #fff;
+      padding: 1px;
+    }
+    
+    .grid-item {
+      background-color: #fafafa;
+      text-align: center;
+      padding: 0px 0;
+      font-size: 30px;
+      border: 0px solid #d2d2d7;
+      border-radius: 5px;
+    }
+  </style>
+
 </head>
-<body>
-	<header class="header">
-		<h1>Two Column Layout</h1>
-	</header>
-	<div class="container">
-		<div class="column column-1">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non leo nisl. Pellentesque sodales sapien ac diam gravida, vel sagittis lectus suscipit. Suspendisse fringilla, eros id aliquet vehicula, eros justo tempus velit, et pharetra nisi metus vel ipsum. Nullam a bibendum sapien, nec blandit purus.</p>
-		</div>
-		<div class="column column-2">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non leo nisl. Pellentesque sodales sapien ac diam gravida, vel sagittis lectus suscipit. Suspendisse fringilla, eros id aliquet vehicula, eros justo tempus velit, et pharetra nisi metus vel ipsum. Nullam a bibendum sapien, nec blandit purus.</p>
-		</div>
-	</div>
-	<footer class="footer">
-		<p>&copy; 2023 My Website</p>
-	</footer>
+
+<body style='background: #fff;'>
+
+  <div id='mainBg' class='grid-container' style='grid-auto-flow: row;margin-top:40px;height:calc(100% - 90px)'>
+
+    <div class="grid-item">
+      <div style=" height: 100%; width: 100%;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div style="height: 100%; width: 100%;"> </div>
+    </div>
+    <div class="grid-item">
+      <div style=" height: 100%; width: 100%;"> </div>
+    </div>
+    <div class="grid-item">
+      <div style="height: 100%; width: 100%;"> </div>
+    </div>
+    <div class="grid-item">
+      <div style="height: 100%; width: 100%;"> </div>
+    </div>
+  </div>
 </body>
 </html>
