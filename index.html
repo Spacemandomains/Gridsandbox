@@ -13,7 +13,7 @@
     
     .grid-container {
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
       grid-template-rows: auto auto;
       grid-gap: 8px;
       background-color: #fff;
@@ -28,29 +28,42 @@
       border: 0px solid #d2d2d7;
       border-radius: 5px;
     }
-
-    /* Nav menu styles */
-    header {
+    
+    .grid-item-3 {
+      grid-column: 1 / span 2;
+    }
+    
+    .grid-item-4 {
+      grid-column: 3 / span 2;
+    }
+    
+    /* Nav menu */
+    .nav-menu {
       background-color: #12264f;
       height: 30px;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      padding-right: 20px;
     }
     
     .nav-button {
-      height: 100%;
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      text-decoration: none;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
       font-weight: bold;
-      font-size: 16px;
+      text-transform: uppercase;
+      font-size: 12px;
     }
-
-    .nav-button:first-of-type {
+    
+    .nav-button-first {
       background-color: #19739c;
-      color: #ffffff;
+      color: #fff;
+    }
+    
+    .nav-button-others {
+      background-color: #fff;
+      color: #12264f;
     }
   </style>
 
@@ -58,33 +71,32 @@
 
 <body style='background: #fff;'>
 
-  <!-- Nav menu -->
-  <header>
-    <a href="#" class="nav-button">Button 1</a>
-    <a href="#" class="nav-button">Button 2</a>
-    <a href="#" class="nav-button">Button 3</a>
-  </header>
-
   <div id='mainBg' class='grid-container' style='grid-auto-flow: row;margin-top:40px;height:calc(100% - 90px)'>
 
     <div class="grid-item">
-      <div style=" height: 100%; width: 100%;">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <div style="height: 100%; width: 100%;"> </div>
     </div>
+    
     <div class="grid-item">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
-    <div class="grid-item">
+    
+    <div class="grid-item grid-item-3">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
-    <div class="grid-item">
+    
+    <div class="grid-item grid-item-4">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
-    <div class="grid-item">
-      <div style="height: 100%; width: 100%;"> </div>
-    </div>
+    
   </div>
-</body>
+  
+  <!-- Nav menu -->
+  <div class="nav-menu">
+    <div class="nav-button nav-button-first">Button 1</div>
+    <div class="nav-button nav-button-others">Button 2</div>
+    <div class="nav-button nav-button-others">Button 3</div>
+  </div>
 
+</body>
 </html>
