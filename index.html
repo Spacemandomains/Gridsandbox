@@ -11,17 +11,13 @@
       padding: 0
     }
     
-    grid-container {
+    .grid-container {
       display: grid;
       grid-template-columns: auto auto auto auto;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto;
       grid-gap: 8px;
       background-color: #fff;
       padding: 1px;
-      
-      /* adjust grid area of fourth item to span across two rows */
-    .grid-item:nth-child(4) {
-      grid-row: span 2;
     }
     
     .grid-item {
@@ -42,21 +38,28 @@
 
     <div class="grid-item">
       <div style=" height: 100%; width: 100%;">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+    
     <div class="grid-item">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
-    <div class="grid-item">
+    
+    <div class="grid-item" style="grid-column: 4/5;">
       <div style=" height: 100%; width: 100%;"> </div>
     </div>
+    
     <div class="grid-item">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
+    
     <div class="grid-item">
       <div style="height: 100%; width: 100%;"> </div>
     </div>
+
   </div>
+  
 </body>
+
 </html>
