@@ -1,106 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Header Nav Bar Menu Example</title>
+    <title>Example</title>
     <style>
-      header {
-        background-color: #12264f;
-      }
-      nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 80%;
-        height: 50px;
-        margin: 0 auto;
-      }
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-      li {
-        padding: 0 10px;
-      }
-      li.active a {
-        color: #17648d;
-      }
-      a {
-        display: block;
-        padding: 10px 0;
-        color: #fff;
-        text-decoration: none;
-      }
-      main {
-        margin-top: 20px;
+      .grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 800px;
-        grid-gap: 20px;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
       }
-
-      .grid-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #f2f2f2;
-        padding: 20px;
+      .box {
+        color: white;
+        font-size: 2vh;
+        padding: 10px;
+        background: gold;
+        margin: 0;
+        text-align: center;
       }
-      .grid-container img {
-        max-width: 100%;
-        height: auto;
+      .box:nth-child(1) {
+        grid-row: span 12;
+        grid-column: span 3;
       }
-      .grid-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  max-width: 100%;
-}
-
-.grid-item img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-.grid-item p {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
+      .box:nth-child(2),
+      .box:nth-child(3) {
+        grid-row: span 6;
+        grid-column: span 2;
+      }
+      .box:nth-child(4),
+      .box:nth-child(5),
+      .box:nth-child(6) {
+        grid-row: span 4;
+        grid-column: span 2;
+      }
+      .box:nth-child(7),
+      .box:nth-child(8),
+      .box:nth-child(9),
+      .box:nth-child(10) {
+        grid-row: span 3;
+        grid-column: span 2;
+      }
+      .box:nth-child(11),
+      .box:nth-child(12),
+      .box:nth-child(13),
+      .box:nth-child(14),
+      .box:nth-child(15),
+      .box:nth-child(16) {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+      @media screen and (max-width: 575px) {
+        .grid {
+          display: block;
+        }
+        .box {
+          margin: 10px 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li class="active"><a href="#">Button 1</a></li>
-          <li><a href="#">Button 2</a></li>
-          <li><a href="#">Button 3</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <iframe width="360" height="315" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <div class="grid-container">
-        <a href="#">
-          <img src="path/to/image1.jpg" alt="Image 1">
-          <p>Paragraph text for image 1.</p>
-        </a>
-      </div>
-      <div class="grid-container">
-        <a href="#">
-          <img src="path/to/image2.jpg" alt="Image 2">
-          <p>Paragraph text for image 2.</p>
-        </a>
-      </div>
+    <main class="grid">
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">11</div>
+      <div class="box">12</div>
+      <div class="box">13</div>
+      <div class="box">14</div>
+      <div class="box">15</div>
+      <div class="box">16</div>
+      <div class="box">17</div>
+      <div class="box">18</div>
+      <div class="box">19</div>
+      <div class="box">20</div>
     </main>
-    <footer>
-      <!-- footer content goes here -->
-    </footer>
   </body>
 </html>
