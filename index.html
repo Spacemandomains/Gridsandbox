@@ -34,7 +34,23 @@
         text-decoration: none;
       }
       main {
-    margin-top: 20px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 800px;
+        grid-gap: 20px;
+      }
+      .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      .grid-container img {
+        max-width: 100%;
+        height: auto;
       }
     </style>
   </head>
@@ -50,6 +66,18 @@
     </header>
     <main>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="grid-container">
+        <a href="#">
+          <img src="path/to/image1.jpg" alt="Image 1">
+          <p>Paragraph text for image 1.</p>
+        </a>
+      </div>
+      <div class="grid-container">
+        <a href="#">
+          <img src="path/to/image2.jpg" alt="Image 2">
+          <p>Paragraph text for image 2.</p>
+        </a>
+      </div>
     </main>
     <footer>
       <!-- footer content goes here -->
