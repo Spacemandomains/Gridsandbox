@@ -1,119 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout Template 4</title>
     <style>
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+     * {
+  box-sizing: border-box;
+}
 
-      /* Navigation */
-      nav {
-        background-color: #12264f;
-        height: 40px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-right: 20px;
-      }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
 
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-      }
+header {
+  background-color: #12264f;
+  color: #fff;
+  padding: 10px;
+}
 
-      /* First Navigation Button */
-      nav a:first-child {
-        background-color: #1977a1;
-        padding: 8px 16px;
-        border-radius: 5px;
-      }
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
 
-      /* Wrapper */
-      .wrapper {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 20px;
-        padding: 20px;
-      }
+header nav ul li {
+  display: inline-block;
+}
 
-      /* Video */
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-      }
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
 
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+.container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "main main main main nav";
+  gap: 20px;
+  padding: 20px;
+}
 
-      /* Ad Container */
-      .ad-container {
-        border: 1px solid #ccc;
-        padding: 20px;
-      }
+.embed-container {
+  grid-area: main;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
 
-      /* Ad Container Inner */
-      .ad-container-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ad-container {
+  background-color: #f2f2f2;
+  grid-row: 1;
+  grid-column: 1 / span 1;
+}
+
+.ad-container img {
+  width: 
     </style>
+  
   </head>
   <body>
-    <!-- Navigation -->
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Wrapper -->
-    <div class="wrapper">
-      <!-- Main Content -->
-      <div class="main-content">
-        <!-- Video Container -->
-        <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+    <main class="container">
+      <div class="embed-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Ad Containers -->
-        <div class="ad-container">
-          <div class="ad-container-inner">Ad 1</div>
-        </div>
-        <div class="ad-container">
-          <div class="ad-container-inner">Ad 2</div>
-        </div>
-        <div class="ad-container">
-          <div class="ad-container-inner">Ad 3</div>
-        </div>
-        <div class="ad-container">
-          <div class="ad-container-inner">Ad 4</div>
-        </div>
+      <div class="ad-container">
+        <img src="https://via.placeholder.com/200x200" alt="Ad 1">
       </div>
-    </div>
+
+      <div class="ad-container">
+        <img src="https://via.placeholder.com/200x200" alt="Ad 2">
+      </div>
+
+      <div class="ad-container">
+        <img src="https://via.placeholder.com/200x200" alt="Ad 3">
+      </div>
+
+      <div class="ad-container">
+        <img src="https://via.placeholder.com/200x200" alt="Ad 4">
+      </div>
+
+      <aside class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </main>
   </body>
 </html>
