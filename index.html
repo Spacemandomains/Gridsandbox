@@ -1,106 +1,107 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nav Menu Example</title>
+    <style>
+      .angry-grid {
+        display: grid; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px;
+        height: 100%;
+      }
+      
+      #item-0 {
+        background-color: #B78DCD; 
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 5;
+      }
+      
+      #item-1 {
+        background-color: #77BBDB; 
+        grid-row-start: 1;
+        grid-column-start: 5;
+        grid-row-end: 4;
+        grid-column-end: 6;
+      }
+      
+      #item-2 {
+        background-color: #BE5DD5; 
+        grid-row-start: 4;
+        grid-column-start: 4;
+        grid-row-end: 6;
+        grid-column-end: 7;
+      }
+      
+      #item-3 {
+        background-color: #A67BA9; 
+        grid-row-start: 4;
+        grid-column-start: 2;
+        grid-row-end: 7;
+        grid-column-end: 3;
+      }
+      
+      #item-4 {
+        background-color: #B5F557; 
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-row-end: 7;
+        grid-column-end: 4;
+      }
+      
+      #item-5 {
+        background-color: #F95BB9; 
+        grid-row-start: 1;
+        grid-column-start: 6;
+        grid-row-end: 4;
+        grid-column-end: 7;
+      }
+      
+      /* new styles for nav menu */
+      header {
+        background-color: #12264f;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      }
+      
+      .nav-button {
+        background-color: #12264f;
+        color: white;
+        border: none;
+        margin-left: 10px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .nav-button:first-of-type {
+        background-color: #1977a1;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <button class="nav-button">Button 1</button>
+      <button class="nav-button">Button 2</button>
+      <button class="nav-button">Button 3</button>
+    </header>
 
-<head>
-  <style>
-    body,
-    html {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0
-    }
-
-    .grid-container {
-  display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-rows: auto auto;
-  grid-gap: 8px;
-  background-color: #fff;
-  padding: 1px;
-}
-    
-    .grid-item {
-      background-color: #fafafa;
-      text-align: center;
-      padding: 0px 0;
-      font-size: 30px;
-      border: 0px solid #d2d2d7;
-      border-radius: 5px;
-    }
-
-    .grid-item:nth-child(2) {
-      height: 1000px;
-    }
-
-    .grid-item:nth-child(3) {
-      height: 1000px;
-      grid-column: span 2;
-    }
-
-    .grid-item:nth-child(4) {
-      height: 600px;
-    }
-
-    .grid-item:nth-child(5) {
-      height: 450px;
-    }
-
-    #nav {
-      height: 40px;
-      background-color: #12264f;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .nav-button {
-      height: 100%;
-      padding: 0 10px;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-    }
-
-    .nav-button:first-child {
-      background-color: #19739c;
-      color: #ffffff;
-    }
-
-  </style>
-
-</head>
-
-<body style='background: #fff;'>
-
-  <div id='nav'>
-    <div class='nav-button' style='background-color: #19739c;'>Button 1</div>
-    <div class='nav-button'>Button 2</div>
-    <div class='nav-button'>Button 3</div>
-  </div>
-
-  <div id='mainBg' class='grid-container' style='grid-auto-flow: row;margin-top:40px;height:calc(100% - 90px)'>
-
-    <div class="grid-item">
-      <div style=" height: 100%; width: 100%;">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Nc1uqy6VICE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
+    <div class="angry-grid">
+      <div id="item-0">&nbsp;</div>
+      <div id="item-1">&nbsp;</div>
+      <div id="item-2">&nbsp;</div>
+      <div id="item-3">&nbsp;</div>
+      <div id="item-4">&nbsp;</div>
+      <div id="item-5">&nbsp;</div>
     </div>
-    <div class="grid-item">
-      <div style="height: 300%; width: 100%;"> </div>
-    </div>
-    <div class="grid-item">
-      <div style=" height: 100%; width: 100%;"> </div>
-    </div>
-    <div class="grid-item grid-item-3">
-      <div style=" height: 100%; width: 100%;"> </div>
-    </div>
-    <div class="grid-item">
-      <div style="height: 100%; width: 100%;"> </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
+
