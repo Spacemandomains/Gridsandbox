@@ -1,122 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS Grid Layout Template 4</title>
-    <style>
-     * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
-
-header {
-  background-color: #12264f;
-  color: #fff;
-  padding: 10px;
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
-header nav ul li {
-  display: inline-block;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  display: inline-block;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: "main main main main nav";
-  gap: 20px;
-  padding: 20px;
-}
-
-.embed-container {
-  grid-area: main;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-
-.embed-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.ad-container {
-  background-color: #f2f2f2;
-  grid-row: 1;
-  grid-column: 1 / span 1;
-}
-
-.ad-container img {
-  width: 
-    </style>
-  
-  </head>
-  <body>
+<head>
+  <title>Grid Container Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 10px;
+    }
+    
+    nav ul li:first-child {
+      margin-left: auto;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .video {
+      width: 50%;
+      margin-right: 20px;
+    }
+    
+    .video iframe {
+      width: 100%;
+      height: 400px;
+    }
+    
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .grid-container {
+      width: 800px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-container a {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .grid-container img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .square-grid-container {
+      width: 400px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .square-grid-container a {
+      display: block;
+      text-decoration: none;
+    }
+    
+    .square-grid-container img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <header>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Button 1</a></li>
+          <li><a href="#">Button 2</a></li>
+          <li><a href="#">Button 3</a></li>
         </ul>
       </nav>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+      </div>
     </header>
-
-    <main class="container">
-      <div class="embed-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <main>
+      <div class="grid-container">
+        <a href="#">
+          <img src="https://via.placeholder.com/800x600.png?text=Image+1" alt="Image 1">
+          <p>Paragraph text 1</p>
+        </a>
       </div>
-
-      <div class="ad-container">
-        <img src="https://via.placeholder.com/200x200" alt="Ad 1">
+      <div class="grid-container">
+        <a href="#">
+          <img src="https://via.placeholder.com/800x600.png?text=Image+2" alt="Image 2">
+          <p>Paragraph text 2</p>
+        </a>
       </div>
-
-      <div class="ad-container">
-        <img src="https://via.placeholder.com/200x200" alt="Ad 2">
+      <div class="grid-container">
+        <a href="#">
+          <img src="https://via.placeholder.com/800x600.png?text=Image+3"
+          <p>Paragraph text 5</p>
+        </a>
       </div>
-
-      <div class="ad-container">
-        <img src="https://via.placeholder.com/200x200" alt="Ad 3">
-      </div>
-
-      <div class="ad-container">
-        <img src="https://via.placeholder.com/200x200" alt="Ad 4">
-      </div>
-
-      <aside class="nav-container">
-        <nav>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-          </ul>
-        </nav>
-      </aside>
     </main>
-  </body>
+  </div>
+</body>
 </html>
