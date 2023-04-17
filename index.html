@@ -1,107 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Nav Menu Example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
     <style>
-      .angry-grid {
-        display: grid; 
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 0px;
-        height: 100%;
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
       }
-      
-      #item-0 {
-        background-color: #B78DCD; 
-        grid-row-start: 1;
-        grid-column-start: 1;
-        grid-row-end: 4;
-        grid-column-end: 5;
-      }
-      
-      #item-1 {
-        background-color: #77BBDB; 
-        grid-row-start: 1;
-        grid-column-start: 5;
-        grid-row-end: 4;
-        grid-column-end: 6;
-      }
-      
-      #item-2 {
-        background-color: #BE5DD5; 
-        grid-row-start: 4;
-        grid-column-start: 4;
-        grid-row-end: 6;
-        grid-column-end: 7;
-      }
-      
-      #item-3 {
-        background-color: #A67BA9; 
-        grid-row-start: 4;
-        grid-column-start: 2;
-        grid-row-end: 7;
-        grid-column-end: 3;
-      }
-      
-      #item-4 {
-        background-color: #B5F557; 
-        grid-row-start: 4;
-        grid-column-start: 3;
-        grid-row-end: 7;
-        grid-column-end: 4;
-      }
-      
-      #item-5 {
-        background-color: #F95BB9; 
-        grid-row-start: 1;
-        grid-column-start: 6;
-        grid-row-end: 4;
-        grid-column-end: 7;
-      }
-      
-      /* new styles for nav menu */
-      header {
+
+      /* Navigation */
+      nav {
         background-color: #12264f;
-        height: 50px;
+        height: 40px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding-right: 20px;
       }
-      
-      .nav-button {
-        background-color: #12264f;
-        color: white;
-        border: none;
-        margin-left: 10px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
       }
-      
-      .nav-button:first-of-type {
+
+      /* First Navigation Button */
+      nav a:first-child {
         background-color: #1977a1;
+        padding: 8px 16px;
+        border-radius: 5px;
+      }
+
+      /* Wrapper */
+      .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+      }
+
+      /* Video */
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Ad Container */
+      .ad-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      /* Ad Container Inner */
+      .ad-container-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
       }
     </style>
   </head>
-  
   <body>
-    <header>
-      <button class="nav-button">Button 1</button>
-      <button class="nav-button">Button 2</button>
-      <button class="nav-button">Button 3</button>
-    </header>
+    <!-- Navigation -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
 
-    <div class="angry-grid">
-      <div id="item-0">&nbsp;</div>
-      <div id="item-1">&nbsp;</div>
-      <div id="item-2">&nbsp;</div>
-      <div id="item-3">&nbsp;</div>
-      <div id="item-4">&nbsp;</div>
-      <div id="item-5">&nbsp;</div>
+    <!-- Wrapper -->
+    <div class="wrapper">
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Video Container -->
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Ad Containers -->
+        <div class="ad-container">
+          <div class="ad-container-inner">Ad 1</div>
+        </div>
+        <div class="ad-container">
+          <div class="ad-container-inner">Ad 2</div>
+        </div>
+        <div class="ad-container">
+          <div class="ad-container-inner">Ad 3</div>
+        </div>
+        <div class="ad-container">
+          <div class="ad-container-inner">Ad 4</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
-
