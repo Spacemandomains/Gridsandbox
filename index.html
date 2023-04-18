@@ -98,25 +98,31 @@
         margin: 10px 0;
       }
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
   </style>
 </head>
 
 <body>
-  <main class="grid">
+  <div class="container">
     <div class="item">
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="box">2</div>
-    <div class="box">9</div>
-    <div class="box">10</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
-    <div class="box">11</div> <!-- New box element -->
-  </main>
+    <main class="grid">
+      <div class="box">2</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </main>
+  </div>
 </body>
 
 </html>
