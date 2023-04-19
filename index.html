@@ -8,6 +8,7 @@
   height: 90vh;
   margin: 2rem;
   display: grid;
+  grid-template-areas:"left main right";
   grid-template-columns: 4fr 1fr 1fr 200px; 
   grid-template-rows: 4fr 1fr 1fr 1fr; 
 }
@@ -55,10 +56,12 @@
 .cell-6 { 
   grid-row: 2; 
   grid-column: 1; 
+  grid-area: left;
 }
 .cell-7 { 
   grid-row: 2; 
-  grid-column: 2; 
+  grid-column: 2;
+  grid-area: main;
 }
   </style>
 </head>
