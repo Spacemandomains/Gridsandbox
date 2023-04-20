@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HTML5 Hierarchy Grid Design</title>
+	<title>My Hierarchy Grid Design</title>
 	<style>
 		.grid-container {
 			display: grid;
-			grid-template-rows: 150px auto;
-			grid-template-columns: 300px 1fr 1fr;
-			grid-gap: 10px;
+			grid-template-columns: 250px 1fr;
+			grid-auto-rows: minmax(80px, auto);
+			grid-gap: 5px;
 			padding: 10px;
 			background-color: #f1f1f1;
-			height: 100vh;
 		}
 		.grid-item {
 			background-color: #ffffff;
 			border: 1px solid #cccccc;
-			padding: 20px;
-			font-size: 1.2em;
+			padding: 10px;
+			font-size: 1em;
 			text-align: center;
+			overflow: hidden;
 		}
 		.video-player {
-			grid-row: 1 / 3;
 			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+			background-color: #333333;
+			color: #ffffff;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
-		.column-1 {
-			grid-row: 2 / 3;
+		.column-left {
 			grid-column: 2 / 3;
+			grid-row: 1 / 3;
 		}
-		.column-2 {
-			grid-row: 2 / 3;
+		.column-right {
 			grid-column: 3 / 4;
+			grid-row: 1 / 3;
+		}
+		@media (max-width: 768px) {
+			.grid-container {
+				grid-template-columns: 1fr;
+			}
+			.video-player {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;
+			}
+			.column-left {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+			}
+			.column-right {
+				grid-column: 1 / 2;
+				grid-row: 3 / 4;
+			}
 		}
 	</style>
 </head>
 <body>
 	<div class="grid-container">
 		<div class="grid-item video-player">
-			<!-- Video player goes here -->
+			<h2>Video Player</h2>
+			<video width="100%" controls>
+				<source src="your-video-source.mp4" type="video/mp4">
+			</video>
 		</div>
-		<div class="grid-item column-1">
-			<!-- Column 1 content goes here -->
+		<div class="grid-item column-left">
+			<h2>Column 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non augue ultricies, efficitur felis ut, dapibus massa. Sed viverra risus in turpis rhoncus, et tincidunt augue euismod. Donec eget vestibulum eros, vel convallis augue.</p>
 		</div>
-		<div class="grid-item column-2">
-			<!-- Column 2 content goes here -->
+		<div class="grid-item column-right">
+			<h2>Column 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non augue ultricies, efficitur felis ut, dapibus massa. Sed viverra risus in turpis rhoncus, et tincidunt augue euismod. Donec eget vestibulum eros, vel convallis augue.</p>
 		</div>
 	</div>
 </body>
