@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Grid Page</title>
+	<title>My Staggered Grid Page</title>
 	<style>
 		.grid-container {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: 1fr 2fr 1fr 3fr 1fr;
+			grid-auto-rows: 100px;
 			grid-gap: 10px;
 			padding: 10px;
 			background-color: #f1f1f1;
@@ -18,18 +18,27 @@
 			font-size: 1.2em;
 			text-align: center;
 		}
+		.grid-item:nth-child(odd) {
+			grid-column: 1 / 3;
+		}
+		.grid-item:nth-child(even) {
+			grid-column: 3 / 6;
+		}
+		.grid-item.large {
+			grid-column: 2 / 5;
+		}
 	</style>
 </head>
 <body>
 	<div class="grid-container">
 		<div class="grid-item">Column 1</div>
-		<div class="grid-item">Column 2</div>
+		<div class="grid-item large">Column 2</div>
 		<div class="grid-item">Column 3</div>
 		<div class="grid-item">Column 4</div>
 		<div class="grid-item">Column 5</div>
 		<div class="grid-item">Column 6</div>
 		<div class="grid-item">Column 7</div>
-		<div class="grid-item">Column 8</div>
+		<div class="grid-item large">Column 8</div>
 		<div class="grid-item">Column 9</div>
 		<div class="grid-item">Column 10</div>
 	</div>
