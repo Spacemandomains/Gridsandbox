@@ -5,22 +5,11 @@
 	<style>
 		.grid-container {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			grid-auto-rows: 100px; /*100px*/
 			grid-gap: 10px;
 			padding: 10px;
 			background-color: #f1f1f1;
-			grid-template-areas: 
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col3 col3 col3"
-				"col1 col1 col2 col2 col5"
-				"col1 col1 col8 col8 col5"
-				"col1 col1 col9 col9 col10";
 		}
 		.grid-item {
 			background-color: #ffffff;
@@ -32,29 +21,22 @@
 			overflow: hidden;
 		}
 		.grid-item:nth-child(odd) {
-			grid-area: col1;
+			grid-column: 1 / 3;
 		}
 		.grid-item:nth-child(even) {
-			grid-area: col2;
-			background-color: #f8f8f8;
+			grid-column: 3 / 5;
 		}
 		.grid-item.large {
-			grid-area: col3;
-			grid-row: 1 / span 8;
-			background-color: #f0f0f0;
+			grid-column: 1 / 3;
 		}
 		.grid-item.extra-large {
-			grid-area: col8;
-			grid-row: 2 / span 8;
-			background-color: #d8d8d8;
+			grid-column: 3 / 5;
 		}
 	</style>
 </head>
 <body>
 	<div class="grid-container">
-		<div class="grid-item extra-large">Column 1</div>
-		<div class="grid-item extra-large">Column 2</div>
-		<div class="grid-item large">Column 3</div>
+		<div class="grid-item large">Column 1</div>
 		<div class="grid-item">Column 4</div>
 		<div class="grid-item">Column 5</div>
 		<div class="grid-item">Column 6</div>
@@ -62,6 +44,7 @@
 		<div class="grid-item extra-large">Column 8</div>
 		<div class="grid-item">Column 9</div>
 		<div class="grid-item">Column 10</div>
+		<div class="grid-item extra-large">Column 3</div>
 	</div>
 </body>
 </html>
