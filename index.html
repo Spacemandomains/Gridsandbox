@@ -1,63 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>1x3 Webpage</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      /* Add some basic styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-      }
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
-      }
-      .column {
-        flex-basis: calc(33.33% - 20px);
-        margin-bottom: 20px;
-        background-color: #f2f2f2;
-        padding: 20px;
-        box-sizing: border-box;
-      }
-      footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Header</h1>
-    </header>
-    <main>
-      <div class="column">
-        <h2>Column 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet mauris vel sapien ullamcorper convallis. Duis aliquet porta velit a laoreet.</p>
-      </div>
-      <div class="column">
-        <h2>Column 2</h2>
-        <p>Ut id leo id velit bibendum congue vel ac felis. Nulla luctus erat eu libero congue, at feugiat mi dictum. Donec luctus justo sit amet mauris lacinia, sit amet scelerisque nisi pellentesque.</p>
-      </div>
-      <div class="column">
-        <h2>Column 3</h2>
-        <p>Mauris accumsan consequat odio, eu finibus orci rhoncus ut. Sed tincidunt elit vel ex feugiat, vitae aliquet leo molestie. Nulla facilisi.</p>
-      </div>
-    </main>
-    <footer>
-      <p>Footer</p>
-    </footer>
-  </body>
+<head>
+	<title>1 Row 3 Column Grid Example</title>
+	<style>
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.column {
+			flex-basis: 30%;
+			padding: 10px;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="column">
+			<h2>Column 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet mauris quis felis auctor interdum.</p>
+		</div>
+		<div class="column">
+			<h2>Column 2</h2>
+			<p>Nulla facilisi. Nulla commodo turpis et hendrerit luctus. Donec commodo eros vel enim vehicula efficitur.</p>
+		</div>
+		<div class="column">
+			<h2>Column 3</h2>
+			<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque commodo, eros vitae blandit convallis, nisi sapien sodales quam, a auctor massa magna sed augue.</p>
+		</div>
+	</div>
+</body>
 </html>
