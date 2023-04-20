@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Hierarchy Grid Design</title>
+	<title>Dynamic Hierarchy Grid Design</title>
 	<style>
 		.grid-container {
 			display: grid;
-			grid-template-columns: 250px 1fr;
-			grid-auto-rows: minmax(80px, auto);
-			grid-gap: 5px;
+			grid-template-columns: 1fr;
+			grid-auto-rows: minmax(100px, auto);
+			grid-gap: 10px;
 			padding: 10px;
 			background-color: #f1f1f1;
 		}
 		.grid-item {
 			background-color: #ffffff;
 			border: 1px solid #cccccc;
-			padding: 10px;
-			font-size: 1em;
+			padding: 20px;
+			font-size: 1.2em;
 			text-align: center;
 			overflow: hidden;
 		}
 		.video-player {
-			grid-column: 1 / 2;
-			grid-row: 1 / 3;
 			background-color: #333333;
 			color: #ffffff;
 			padding: 10px;
@@ -29,28 +27,31 @@
 			align-items: center;
 			justify-content: center;
 		}
-		.column-left {
-			grid-column: 2 / 3;
-			grid-row: 1 / 3;
-		}
-		.column-right {
-			grid-column: 3 / 4;
-			grid-row: 1 / 3;
-		}
-		@media (max-width: 768px) {
+		@media (min-width: 768px) {
 			.grid-container {
-				grid-template-columns: 1fr;
+				grid-template-columns: 300px 1fr;
 			}
 			.video-player {
 				grid-column: 1 / 2;
+				grid-row: 1 / 3;
+			}
+			.column-left {
+				grid-column: 2 / 3;
+				grid-row: 1 / 2;
+			}
+			.column-right {
+				grid-column: 2 / 3;
+				grid-row: 2 / 3;
+			}
+		}
+		@media (max-width: 767px) {
+			.video-player {
 				grid-row: 1 / 2;
 			}
 			.column-left {
-				grid-column: 1 / 2;
 				grid-row: 2 / 3;
 			}
 			.column-right {
-				grid-column: 1 / 2;
 				grid-row: 3 / 4;
 			}
 		}
