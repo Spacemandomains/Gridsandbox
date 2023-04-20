@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dynamic Grid Layout Example</title>
+    <title>1x3 Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      /* Set the container to a grid */
-      .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 4fr);
-        gap: 20px;
+      /* Add some basic styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
         padding: 20px;
       }
-      
-      /* Set the video player to span two columns and one row */
-      .video-player {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
-  height: 500px;
-  background-color: #e6e6e6;
-  width: 50%; /* Add this line to set the width to 50% */
-     }
-      
-      /* Set the image column to span one column and two rows */
-      .image-column {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 2;
-        background-color: #cccccc;
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
       }
-      
-      /* Set the text column to span one column and two rows */
-      .text-column {
-        grid-column: 2 / span 1;
-        grid-row: 2 / span 2;
-        background-color: #999999;
+      .column {
+        flex-basis: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        box-sizing: border-box;
       }
-      
-      /* Set the image and text content to fill their respective columns */
-      .image-content, .text-content {
-        height: 100%;
-        width: 100%;
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
         padding: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="video-player"></div>
-      <div class="image-column">
-        <div class="image-content"><img src="image1.jpg" alt="Image 1">
-        </div>
-        <div class="image-content"><img src="image2.jpg" alt="Image 2">
-        </div>
-        <div class="image-content"><img src="image3.jpg" alt="Image 3">
-        </div>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <main>
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet mauris vel sapien ullamcorper convallis. Duis aliquet porta velit a laoreet.</p>
       </div>
-      <div class="text-column">
-        <div class="text-content">
-          <h2>Heading 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna ut est suscipit iaculis quis eu nulla. Aliquam sit amet sapien nisi.</p>
-          <h2>Heading 2</h2>
-          <p>Donec ut risus nibh. Nulla ut ex ac purus interdum pharetra. Sed sodales eros eu sagittis tincidunt. Vivamus dignissim urna vel tortor vestibulum ullamcorper.</p>
-        </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Ut id leo id velit bibendum congue vel ac felis. Nulla luctus erat eu libero congue, at feugiat mi dictum. Donec luctus justo sit amet mauris lacinia, sit amet scelerisque nisi pellentesque.</p>
       </div>
-    </div>
+      <div class="column">
+        <h2>Column 3</h2>
+        <p>Mauris accumsan consequat odio, eu finibus orci rhoncus ut. Sed tincidunt elit vel ex feugiat, vitae aliquet leo molestie. Nulla facilisi.</p>
+      </div>
+    </main>
+    <footer>
+      <p>Footer</p>
+    </footer>
   </body>
 </html>
