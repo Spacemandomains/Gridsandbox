@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>1 Row 3 Column Grid Example</title>
+	<title>My Grid Page</title>
 	<style>
-		.row {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		.column {
-			flex-basis: 30%;
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-gap: 10px;
 			padding: 10px;
-			background-color: #eee;
+			background-color: #f1f1f1;
+		}
+		.grid-item {
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			padding: 20px;
+			font-size: 1.2em;
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
-	<div class="row">
-		<div class="column">
-			<h2>Column 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet mauris quis felis auctor interdum.</p>
-		</div>
-		<div class="column">
-			<h2>Column 2</h2>
-			<p>Nulla facilisi. Nulla commodo turpis et hendrerit luctus. Donec commodo eros vel enim vehicula efficitur.</p>
-		</div>
-		<div class="column">
-			<h2>Column 3</h2>
-			<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque commodo, eros vitae blandit convallis, nisi sapien sodales quam, a auctor massa magna sed augue.</p>
-		</div>
+	<div class="grid-container">
+		<div class="grid-item">Column 1</div>
+		<div class="grid-item">Column 2</div>
+		<div class="grid-item">Column 3</div>
+		<div class="grid-item">Column 4</div>
+		<div class="grid-item">Column 5</div>
+		<div class="grid-item">Column 6</div>
+		<div class="grid-item">Column 7</div>
+		<div class="grid-item">Column 8</div>
+		<div class="grid-item">Column 9</div>
+		<div class="grid-item">Column 10</div>
 	</div>
 </body>
 </html>
