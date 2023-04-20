@@ -6,28 +6,31 @@
       /* Set the height of the large square */
       .large-square {
         height: 400px;
+        width: 50%;
+        float: left;
+        background-color: #e6e6e6;
       }
       
       /* Set the height of the columns */
       .column {
         height: 800px;
-      }
-      
-      /* Set the width of the columns */
-      .left-column {
-        width: 25%;
+        width: 50%;
         float: left;
       }
       
+      /* Set the background colors of the columns */
+      .left-column {
+        background-color: #cccccc;
+      }
+      
       .right-column {
-        width: 25%;
-        float: right;
+        background-color: #999999;
       }
     </style>
   </head>
   <body>
-    <div class="large-square" style="background-color: #e6e6e6;"></div>
-    <div class="column left-column" style="background-color: #cccccc;"></div>
-    <div class="column right-column" style="background-color: #999999;"></div>
+    <div class="large-square"></div>
+    <div class="column left-column"></div>
+    <div class="column right-column"></div>
   </body>
 </html>
