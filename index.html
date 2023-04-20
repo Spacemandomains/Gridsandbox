@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dynamic Layout Example</title>
+    <title>Dynamic Grid Layout Example</title>
     <style>
-      /* Set the height of the large square */
-      .large-square {
-        height: 400px;
-        width: 50%;
-        float: left;
+      /* Set the container to a grid */
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+      
+      /* Set the video player to span two columns and one row */
+      .video-player {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        height: 500px;
         background-color: #e6e6e6;
       }
       
-      /* Set the height of the columns */
-      .column {
-        height: 800px;
-        width: 50%;
-        float: left;
+      /* Set the image column to span one column and two rows */
+      .image-column {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        background-color: #cccccc;
       }
       
-      /* Set the background colors of the columns */
-      .large-square {
-        background-color: #FF0000;
+      /* Set the text column to span one column and two rows */
+      .text-column {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+        background-color: #999999;
       }
-      .left-column {
-        background-color: #0000FF;
-      }  
-      .right-column {
-        background-color: #008000;
+      
+      /* Set the image and text content to fill their respective columns */
+      .image-content, .text-content {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="large-square"></div>
-    <div class="column left-column"></div>
-    <div class="column right-column"></div>
+    <div class="container">
+      <div class="video-player"></div>
+      <div class="image-column">
+        <div class="image-content">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+      </div>
+      <div class="text-column">
+        <div class="text-content">
+          <h2>Heading 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna ut est suscipit iaculis quis eu nulla. Aliquam sit amet sapien nisi.</p>
+          <h2>Heading 2</h2>
+          <p>Donec ut risus nibh. Nulla ut ex ac purus interdum pharetra. Sed sodales eros eu sagittis tincidunt. Vivamus dignissim urna vel tortor vestibulum ullamcorper.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
