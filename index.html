@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dynamic Hierarchy Grid Design</title>
+	<meta charset="UTF-8">
+	<title>Dynamic Hierarchy Grid Design with YouTube Embed</title>
 	<style>
-		.grid-container {
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		.container {
 			display: grid;
-			grid-template-columns: 1fr;
-			grid-auto-rows: minmax(100px, auto);
-			grid-gap: 10px;
-			padding: 10px;
-			background-color: #f1f1f1;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 80px 1fr;
+			grid-template-areas:
+				"header header header"
+				"sidebar main main";
+			height: 100vh;
 		}
-		.grid-item {
-			background-color: #ffffff;
-			border: 1px solid #cccccc;
-			padding: 20px;
-			font-size: 1.2em;
-			text-align: center;
-			overflow: hidden;
-		}
-		.video-player {
-			background-color: #333333;
-			color: #ffffff;
-			padding: 10px;
+		.header {
+			grid-area: header;
+			background-color: #333;
+			color: #fff;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			font-size: 2em;
+			font-weight: bold;
 		}
-		@media (min-width: 768px) {
-			.grid-container {
-				grid-template-columns: 300px 1fr;
-			}
-			.video-player {
-				grid-column: 1 / 2;
-				grid-row: 1 / 3;
-			}
-			.column-left {
-				grid-column: 2 / 3;
-				grid-row: 1 / 2;
-			}
-			.column-right {
-				grid-column: 2 / 3;
-				grid-row: 2 / 3;
-			}
+		.sidebar {
+			grid-area: sidebar;
+			background-color: #ddd;
+			padding: 20px;
+			overflow: auto;
 		}
-		@media (max-width: 767px) {
-			.video-player {
-				grid-row: 1 / 2;
-			}
-			.column-left {
-				grid-row: 2 / 3;
-			}
-			.column-right {
-				grid-row: 3 / 4;
-			}
+		.main {
+			grid-area: main;
+			background-color: #fff;
+			padding: 20px;
+			overflow: auto;
+		}
+		.video-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+		}
+		.video-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			margin: 10px 0;
 		}
 	</style>
 </head>
 <body>
-	<div class="grid-container">
-		<div class="grid-item video-player">
-			<h2>Video Player</h2>
-			<video width="100%" controls>
-				<source src="your-video-source.mp4" type="video/mp4">
-			</video>
-		</div>
-		<div class="grid-item column-left">
-			<h2>Column 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non augue ultricies, efficitur felis ut, dapibus massa. Sed viverra risus in turpis rhoncus, et tincidunt augue euismod. Donec eget vestibulum eros, vel convallis augue.</p>
-		</div>
-		<div class="grid-item column-right">
-			<h2>Column 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non augue ultricies, efficitur felis ut, dapibus massa. Sed viverra risus in turpis rhoncus, et tincidunt augue euismod. Donec eget vestibulum eros, vel convallis augue.</p>
-		</div>
+	<div class="container">
+		<header class="header">Dynamic Hierarchy Grid Design with YouTube Embed</header>
+		<aside class="sidebar">
+			<ul>
+				<li>Category 1</li>
+				<li>Category 2</li>
+				<li>Category 3</li>
+			</ul>
+		</aside>
+		<main class="main">
+			<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in leo sed sapien consequat malesuada. Phasellus auctor nisl ac risus euismod posuere. Proin interdum ipsum in sem porta placerat. In imperdiet euismod massa, eu fringilla quam bibendum eu. Vestibulum id nunc dui. Ut in eleifend nunc. Nullam sed purus fermentum, fringilla sapien vitae, bibendum metus. Sed id sodales massa.</p>
+		</main>
 	</div>
 </body>
 </html>
