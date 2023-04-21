@@ -2,49 +2,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Layout Example</title>
+	<title>Grid Layout Example</title>
 	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-		}
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			grid-template-rows: auto auto auto;
+			grid-gap: 10px;
 			background-color: #fff;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			gap: 20px;
-			margin-top: 20px;
+			color: #444;
+			padding: 20px;
 		}
-		.text {
-			flex-basis: 50%;
-			font-size: 18px;
-			line-height: 1.5;
-		}
-		.image {
-			flex-basis: 50%;
-		}
-		.image img {
-			width: 100%;
-			height: auto;
-			display: block;
+
+		.grid-item {
+			background-color: #ddd;
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="text">
-			<h1>Layout Example</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mi eget convallis fermentum, justo lectus egestas orci, at cursus ipsum ante vel velit. Nulla facilisi. Nam maximus orci id sapien lacinia, nec malesuada nunc accumsan. Praesent ultrices leo sit amet ipsum eleifend, non elementum orci rhoncus. Sed tincidunt justo in risus dictum, eget auctor ex tempor. Vestibulum tincidunt urna nunc, eu pulvinar libero tempus sit amet. Morbi nec magna in risus aliquet facilisis. Fusce auctor, purus vitae maximus dignissim, tortor enim luctus odio, vel finibus massa ipsum et metus.</p>
-		</div>
-		<div class="image">
-			<img src="https://lh5.googleusercontent.com/reVtr50vnKSaVj3SleFQuhlDEgxSy8dwra_AJ2TJYYybyfYwG0stnicMg1lnaUeKY4DmFXM2wD4FaU0DEMU3PjTjz4zq_uIiKsyxh1UPEAmKleDtg0qc5Nx5d-sylXnylI7LiUJY" alt="Example Image">
-		</div>
+
+	<div class="grid-container">
+		<div class="grid-item">1</div>
+		<div class="grid-item">2</div>
+		<div class="grid-item">3</div>
+		<div class="grid-item">4</div>
+		<div class="grid-item">5</div>
+		<div class="grid-item">6</div>
+		<div class="grid-item">7</div>
+		<div class="grid-item">8</div>
+		<div class="grid-item">9</div>
 	</div>
+
 </body>
-</html
+</html>
