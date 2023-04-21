@@ -11,56 +11,34 @@
 			box-sizing: border-box;
 		}
 
-		/* Set up the navigation menu */
 		nav {
-			background-color: #12264f;
-			color: #fff;
-			display: flex;
-			justify-content: space-between;
-			align-items: right;
-			padding: 1rem;
-		}
+  background-color: #333;
+  overflow: hidden;
+}
 
-		nav ul {
-			display: flex;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			text-align: left;
-		}
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
 
-		nav ul li {
-			margin: 0 1rem;
-		}
+.menu li {
+  display: inline-block;
+}
 
-		nav a {
-			color: #fff;
-			text-decoration: none;
-			font-size: 1.2rem;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 0.1rem;
-			padding: 1rem;
-			border-radius: 5px;
-		}
-		
-		 ul {
-        		text-align: right;
-    		}
-    		
-		li {
-        		display: inline-block;
-		}
-        /* Add any other desired styling */
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-		nav a:first-child {
-			color: #1a84ae;
-		}
+.menu li a:hover {
+  background-color: #111;
+}
 
-		nav a:last-child {
-			color: #8c96aa;
-		}
-		
 		/* Set up the main content area */
 		.main {
 			display: grid;
@@ -130,12 +108,12 @@
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li><a href="#">Email</a></li>
-				<li><a href="#">Phone</a></li>
-				<li><a href="#">Video Call</a></li>
-			</ul>
-		</nav>
+  <ul class="menu">
+    <li><a href="#">Button 1</a></li>
+    <li><a href="#">Button 2</a></li>
+    <li><a href="#">Button 3</a></li>
+  </ul>
+</nav>
 	</header>
 	<body>
 	<main class="main">
