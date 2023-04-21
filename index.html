@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Swiss Style Webpage</title>
 	<meta charset="UTF-8">
-	<title>Grid Layout Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		.grid-container {
-			display: grid;
-			grid-template-columns: auto auto auto;
-			grid-template-rows: auto auto auto;
-			grid-gap: 100px;
-			background-color: #fff;
-			color: #444;
-			padding: 100px;
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #ffffff;
+			color: #000000;
 		}
 
-		.grid-item {
-			background-color: #ddd;
+		header {
+			background-color: #000000;
+			color: #ffffff;
 			padding: 20px;
+			text-align: center;
 			font-size: 30px;
+		}
+
+		nav {
+			background-color: #000000;
+			color: #ffffff;
+			padding: 10px;
 			text-align: center;
 		}
-		
-		.grid-item iframe {
+
+		nav a {
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 18px;
 			padding: 10px;
+			margin: 10px;
+			display: inline-block;
+			transition: all 0.3s ease-in-out;
+		}
+
+		nav a:hover {
+			background-color: #ffffff;
+			color: #000000;
+			border-radius: 5px;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.featured-image {
+			max-width: 600px;
+			margin-bottom: 20px;
+		}
+
+		.featured-text {
+			flex: 1;
+			margin-left: 20px;
+			font-size: 24px;
+			line-height: 1.5;
+			text-align: justify;
+		}
+
+		footer {
+			background-color: #000000;
+			color: #ffffff;
+			padding: 20px;
+			text-align: center;
+			font-size: 14px;
 		}
 	</style>
 </head>
 <body>
-
-	<div class="grid-container">
-		<div class="grid-item">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/Nc1uqy6VICE"frameborder="0" allowfullscreen></iframe>
+	<header>
+		Swiss Style Webpage
+	</header>
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Contact</a>
+	</nav>
+	<div class="container">
+		<img src="https://dummyimage.com/600x400/000000/ffffff" alt="Featured image" class="featured-image">
+		<div class="featured-text">
+			<h2>Featured Content</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu elit elit. Sed fermentum risus sit amet magna malesuada, eu auctor sapien viverra. Sed efficitur mauris mauris, a bibendum purus tristique vel. Suspendisse finibus arcu eu blandit porttitor.</p>
+			<p>Vestibulum maximus justo sit amet turpis lacinia, eu molestie urna varius. Nullam maximus semper orci ut consequat. Integer ut orci sed sapien eleifend rutrum vitae ut nisi. Suspendisse potenti. Nunc id nisi id purus pulvinar venenatis vel et massa.</p>
 		</div>
-		<div class="grid-item">2</div>
-		<div class="grid-item">3</div>
-		<div class="grid-item">4</div>
-		<div class="grid-item">5</div>
-		<div class="grid-item">6</div>
-		<div class="grid-item">7</div>
-		<div class="grid-item">8</div>
-		<div class="grid-item">9</div>
 	</div>
-
+	<footer>
+		&copy; 2023 Swiss Style Webpage. All rights reserved.
+	</footer>
 </body>
 </html>
