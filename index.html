@@ -2,86 +2,49 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Dynamic Hierarchy Grid Design with YouTube Embed</title>
+	<title>Layout Example</title>
 	<style>
 		body {
-			margin: 0;
-			padding: 0;
 			font-family: Arial, sans-serif;
-			font-size: 16px;
-			line-height: 1.5;
+			background-color: #f2f2f2;
 		}
 		.container {
-			display: grid;
-			grid-template-columns: 1fr 3fr;
-			grid-template-rows: 80px 1fr;
-			grid-template-areas:
-				"header header"
-				"sidebar main";
-			height: 100vh;
-		}
-		.header {
-			grid-area: header;
-			background-color: #333;
-			color: #fff;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 2em;
-			font-weight: bold;
-		}
-		.sidebar {
-			grid-area: sidebar;
-			background-color: #ddd;
+			max-width: 800px;
+			margin: 0 auto;
 			padding: 20px;
-			overflow: auto;
-		}
-		.main {
-			grid-area: main;
 			background-color: #fff;
-			padding: 20px;
-			overflow: auto;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			margin-top: 20px;
 		}
-		.video-container {
-			position: relative;
-			padding-bottom: 56.25%;
-			height: 0;
-			overflow: hidden;
-			margin-bottom: 20px;
+		.text {
+			flex-basis: 50%;
+			font-size: 18px;
+			line-height: 1.5;
 		}
-		.video-container iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
+		.image {
+			flex-basis: 50%;
+		}
+		.image img {
 			width: 100%;
-			height: 100%;
-		}
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		li {
-			margin: 10px 0;
+			height: auto;
+			display: block;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<header class="header">Dynamic Hierarchy Grid Design with YouTube Embed</header>
-		<aside class="sidebar">
-			<ul>
-				<li>Category 1</li>
-				<li>Category 2</li>
-				<li>Category 3</li>
-			</ul>
-		</aside>
-		<main class="main">
-			<div class="video-container">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in leo sed sapien consequat malesuada. Phasellus auctor nisl ac risus euismod posuere. Proin interdum ipsum in sem porta placerat. In imperdiet euismod massa, eu fringilla quam bibendum eu. Vestibulum id nunc dui. Ut in eleifend nunc. Nullam sed purus fermentum, fringilla sapien vitae, bibendum metus. Sed id sodales massa.</p>
-		</main>
+		<div class="text">
+			<h1>Layout Example</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mi eget convallis fermentum, justo lectus egestas orci, at cursus ipsum ante vel velit. Nulla facilisi. Nam maximus orci id sapien lacinia, nec malesuada nunc accumsan. Praesent ultrices leo sit amet ipsum eleifend, non elementum orci rhoncus. Sed tincidunt justo in risus dictum, eget auctor ex tempor. Vestibulum tincidunt urna nunc, eu pulvinar libero tempus sit amet. Morbi nec magna in risus aliquet facilisis. Fusce auctor, purus vitae maximus dignissim, tortor enim luctus odio, vel finibus massa ipsum et metus.</p>
+		</div>
+		<div class="image">
+			<img src="https://lh5.googleusercontent.com/reVtr50vnKSaVj3SleFQuhlDEgxSy8dwra_AJ2TJYYybyfYwG0stnicMg1lnaUeKY4DmFXM2wD4FaU0DEMU3PjTjz4zq_uIiKsyxh1UPEAmKleDtg0qc5Nx5d-sylXnylI7LiUJY" alt="Example Image">
+		</div>
 	</div>
 </body>
-</html>
+</html
