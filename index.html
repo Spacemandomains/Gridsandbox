@@ -16,10 +16,10 @@
   			overflow: hidden;
 		}
 		
-		nav span {
+		nav .left-text {
+  			float: left; /* add this line */
   			display: block;
   			color: #ffffff;
-  			text-align: left;
   			padding: 14px 16px;
 		}
 
@@ -116,9 +116,9 @@
 </head>
 <body>
 	<header>
-		<nav>
+<nav>
   <ul class="menu">
-    <li><span>Left aligned text</span></li>
+    <li><span class="left-text">Left aligned text</span></li>
     <li><a href="#"class="button-1">Email</a></li>
     <li><a href="#">Phone</a></li>
     <li><a href="#">Video Chat</a></li>
